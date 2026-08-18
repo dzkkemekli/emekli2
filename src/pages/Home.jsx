@@ -10,8 +10,6 @@ export default function Home() {
     <>
       <FlagBanner />
       <Hero />
-      <SectionOverview />
-      <VideoSection />
       <section id="galeri" className="mx-auto max-w-6xl scroll-mt-20 px-4 py-16 sm:px-6 sm:py-24">
         <SectionHeading
           eyebrow="Anılar"
@@ -22,6 +20,8 @@ export default function Home() {
           <Gallery />
         </div>
       </section>
+      <SectionOverview />
+      <VideoSection />
     </>
   )
 }
