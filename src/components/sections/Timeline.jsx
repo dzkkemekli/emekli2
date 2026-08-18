@@ -1,6 +1,7 @@
 import { motion } from "motion/react"
 
 import { career } from "@/data/career"
+import RankInsignia from "@/components/RankInsignia"
 
 export default function Timeline() {
   return (
@@ -53,9 +54,18 @@ export default function Timeline() {
                     <span className="inline-flex w-fit items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-semibold text-primary">
                       {entry.year}
                     </span>
-                    <span className="text-xs uppercase tracking-[0.14em] text-muted-foreground">
-                      {entry.rank}
-                    </span>
+                    <div
+                      className={
+                        isLeft
+                          ? "flex items-center gap-2 md:flex-row-reverse md:items-center"
+                          : "flex items-center gap-2"
+                      }
+                    >
+                      <RankInsignia rank={entry.rank} size={32} />
+                      <span className="text-xs uppercase tracking-[0.14em] text-muted-foreground">
+                        {entry.rank}
+                      </span>
+                    </div>
                   </div>
                   <h3 className="mt-2 font-serif text-lg font-semibold">
                     {entry.title}

@@ -13,8 +13,8 @@ export const profile = {
   portrait: null, // fotoğraf eklenince yukarıdaki satırı açın
   // Hizmet özeti — gerçek değerleri doldurun
   stats: [
-    { label: "Hizmet Yılı", value: "—" },
-    { label: "Görev Yeri", value: "—" },
-    { label: "Takdir & Ödül", value: "—" },
+    { label: "Hizmet Yılı", value: 35 },
+    { label: "Görev Yeri", value: 5 },
+    { label: "Takdir & Ödül", value: 6 },
   ],
 }

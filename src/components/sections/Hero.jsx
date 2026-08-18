@@ -4,6 +4,20 @@ import { ArrowRight, Medal, Images, MapPin } from "lucide-react"
 
 import { profile } from "@/data/profile"
 import { Button } from "@/components/ui/button"
+import TextureOverlay from "@/components/sections/TextureOverlay"
+import { useCountUp } from "@/lib/useCountUp"
+
+function StatItem({ stat }) {
+  const { value, ref } = useCountUp(stat.value)
+  return (
+    <div ref={ref}>
+      <dt className="text-xs uppercase tracking-[0.14em] text-muted-foreground">
+        {stat.label}
+      </dt>
+      <dd className="mt-1 font-serif text-2xl font-semibold text-primary">{value}+</dd>
+    </div>
+  )
+}
 
 export default function Hero() {
   return (
@@ -13,14 +27,7 @@ export default function Hero() {
         aria-hidden
         className="absolute inset-0 -z-10 bg-gradient-to-b from-secondary/5 via-background to-muted/40"
       />
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-10 opacity-[0.04]"
-        style={{
-          backgroundImage:
-            "repeating-linear-gradient(135deg, var(--foreground) 0 1px, transparent 1px 12px)",
-        }}
-      />
+      <TextureOverlay variant="topo" opacity={0.05} />
 
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 lg:py-28">
         {/* Sol: metin */}
@@ -82,7 +89,7 @@ export default function Hero() {
             </Button>
           </motion.div>
 
-          {/* Hizmet özeti */}
+          {/* Hizmet özeti — sayar */}
           <motion.dl
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
@@ -90,14 +97,7 @@ export default function Hero() {
             className="mt-12 grid max-w-md grid-cols-3 gap-4 border-t border-border/70 pt-6"
           >
             {profile.stats.map((stat) => (
-              <div key={stat.label}>
-                <dt className="text-xs uppercase tracking-[0.14em] text-muted-foreground">
-                  {stat.label}
-                </dt>
-                <dd className="mt-1 font-serif text-2xl font-semibold text-primary">
-                  {stat.value}
-                </dd>
-              </div>
+              <StatItem key={stat.label} stat={stat} />
             ))}
           </motion.dl>
         </div>

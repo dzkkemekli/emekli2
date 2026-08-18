@@ -1,4 +1,5 @@
 // Kariyer zaman çizelgesi — içerikleri buradan güncelleyebilirsiniz.
+// rank: src/data/ranks.js içindeki rankInsigniaMap anahtarlarıyla eşleşmeli.
 // image: ilgili yıla ait bir fotoğraf eklemek isterseniz
 // import edip buraya ekleyebilirsiniz. Örn:
 // import img1985 from "@/assets/career/1985.jpg"

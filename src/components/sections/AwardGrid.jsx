@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import { motion } from "motion/react"
 import Lightbox from "yet-another-react-lightbox"
 import { Medal, ZoomIn } from "lucide-react"
@@ -8,6 +8,7 @@ import { awards } from "@/data/awards"
 export default function AwardGrid() {
   const [open, setOpen] = useState(false)
   const [index, setIndex] = useState(0)
+  const cardRefs = useRef({})
 
   const slides = awards
     .filter((a) => a.image)
@@ -19,6 +20,16 @@ export default function AwardGrid() {
     setOpen(true)
   }
 
+  // Ribbon rack'ten gelen özel olayı dinle
+  useEffect(() => {
+    const handler = (e) => {
+      const el = cardRefs.current[e.detail]
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "center" })
+    }
+    window.addEventListener("award:scrollTo", handler)
+    return () => window.removeEventListener("award:scrollTo", handler)
+  }, [])
+
   return (
     <>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -27,6 +38,7 @@ export default function AwardGrid() {
           return (
             <motion.figure
               key={award.id}
+              ref={(el) => (cardRefs.current[award.id] = el)}
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -79,6 +91,14 @@ export default function AwardGrid() {
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   {award.description}
                 </p>
+                {award.ribbon && (
+                  <div className="mt-4 flex items-center gap-2 border-t border-border/60 pt-3">
+                    <span className="h-4 w-3.5 rounded-sm ring-1 ring-black/10" style={{ backgroundColor: award.ribbon.center }} />
+                    <span className="text-[11px] uppercase tracking-[0.14em] text-muted-foreground">
+                      Şeref şeridi
+                    </span>
+                  </div>
+                )}
               </figcaption>
             </motion.figure>
           )
