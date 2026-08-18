@@ -38,7 +38,7 @@ const images = {
 //  KİŞİSEL BİLGİLER  (Hero + Özgeçmiş)
 // ----------------------------------------------------------------------------
 export const profile = {
-  name: "Yunus Ağabey",
+  name: "ÖMER ALP",
   rank: "Emekli Astsubay",
   tagline: "Bir ömür vatan uğruna, anılara yazılmış hizmet.",
   shortBio:
