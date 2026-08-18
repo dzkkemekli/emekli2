@@ -4,12 +4,14 @@ import SectionOverview from "@/components/sections/SectionOverview"
 import VideoSection from "@/components/sections/VideoSection"
 import SectionHeading from "@/components/sections/SectionHeading"
 import Gallery from "@/components/sections/Gallery"
+import RetirementCounter from "@/components/sections/RetirementCounter"
 
 export default function Home() {
   return (
     <>
       <FlagBanner />
       <Hero />
+      <RetirementCounter />
       <section id="galeri" className="mx-auto max-w-6xl scroll-mt-20 px-4 py-16 sm:px-6 sm:py-24">
         <SectionHeading
           eyebrow="Anılar"

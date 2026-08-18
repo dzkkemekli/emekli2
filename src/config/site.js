@@ -41,6 +41,8 @@ export const profile = {
   shortBio:
     "Yıllar boyunca çeşitli birliklerde görev yapmış, görevini şerefle ifa etmiş bir askerin anıları, hizmet yerleri ve takdir edilen değerleri bir araya getiren saygı anıtı.",
   portrait: images.portrait,
+  // Emeklilik tarihi (YYYY-AA-GG) — sayaç bu tarihten itibaren sayar
+  retirementDate: "2026-08-18",
   // Hizmet özeti — Hero'daki sayaç istatistikleri
   stats: [
     { label: "Hizmet Yılı", value: 35 },
