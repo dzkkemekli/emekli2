@@ -297,6 +297,15 @@ export const gallery = [
 ]
 
 // ----------------------------------------------------------------------------
+//  EMEĞİ GEÇENLER  (Sayfa altı — katkıda bulunanlar)
+// ----------------------------------------------------------------------------
+export const contributors = [
+  { id: "yunus", name: "Yunus Ağabey", role: "Anıların sahibi" },
+  { id: "aile", name: "Aile", role: "Arşiv desteği" },
+  { id: "ekip", name: "Hazırlayan Ekip", role: "Tasarım & geliştirme" },
+]
+
+// ----------------------------------------------------------------------------
 //  TOPLU EXPORT — tek nesne olarak da erişilebilir
 // ----------------------------------------------------------------------------
 const site = {
@@ -310,6 +319,7 @@ const site = {
   awards,
   gallery,
   featuredVideo,
+  contributors,
 }
 
 export default site

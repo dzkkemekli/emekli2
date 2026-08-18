@@ -2,7 +2,7 @@ import { Outlet, ScrollRestoration, useLocation } from "react-router-dom"
 import { motion, AnimatePresence } from "motion/react"
 
 import Navbar from "@/components/layout/Navbar"
-import Footer from "@/components/layout/Footer"
+import Contributors from "@/components/sections/Contributors"
 
 export default function Layout() {
   const location = useLocation()
@@ -23,7 +23,7 @@ export default function Layout() {
           </motion.div>
         </AnimatePresence>
       </main>
-      <Footer />
+      <Contributors />
       <ScrollRestoration />
     </div>
   )
