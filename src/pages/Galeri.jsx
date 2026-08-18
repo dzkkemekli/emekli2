@@ -7,7 +7,7 @@ export default function Galeri() {
       <SectionHeading
         eyebrow="Anılar"
         title="Galeri"
-        description="Yıllara yayılan fotoğraf ve video arşivinden bir seçki. Kaydırarak karoseli gezin, öğelere dokunarak tam ekran görüntüleyin."
+        description="Yıllara yayılan fotoğraf ve video arşivinden bir seçki. Görünüm değiştirici ile karosel, akış veya ızgara modunda gezin; öğelere dokunarak tam ekran büyütün ve ok tuşları ile geçin."
       />
       <div className="mt-14">
         <Gallery />

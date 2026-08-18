@@ -1,6 +1,6 @@
 import { motion } from "motion/react"
 
-import { rankOrder, rankInsigniaMap } from "@/data/ranks"
+import { rankOrder, rankInsigniaMap } from "@/config/site"
 import RankInsignia from "@/components/RankInsignia"
 
 // Özgeçmiş sayfasının yanında gösterilen dikey rütbe merdiveni.

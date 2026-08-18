@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-import { navLinks } from "@/data/nav"
+import { navLinks } from "@/config/site"
 
 export default function Footer() {
   return (

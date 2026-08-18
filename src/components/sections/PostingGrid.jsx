@@ -3,7 +3,7 @@ import { motion } from "motion/react"
 import Lightbox from "yet-another-react-lightbox"
 import { MapPin, Calendar, Building2, Images } from "lucide-react"
 
-import { postings } from "@/data/postings"
+import { postings } from "@/config/site"
 
 export default function PostingGrid() {
   const [lightbox, setLightbox] = useState({ open: false, index: 0 })

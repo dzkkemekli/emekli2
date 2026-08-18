@@ -1,11 +1,12 @@
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
+import { useEffect } from "react"
+import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet"
 import L from "leaflet"
 import { motion } from "motion/react"
 import { MapPin, Calendar, Building2 } from "lucide-react"
 
 import "leaflet/dist/leaflet.css"
 
-import { postings } from "@/data/postings"
+import { postings } from "@/config/site"
 
 // Vite ile leaflet marker ikonlarını düzelt
 const pinIcon = L.divIcon({
@@ -15,6 +16,33 @@ const pinIcon = L.divIcon({
   iconAnchor: [14, 28],
   popupAnchor: [0, -26],
 })
+
+// Tüm pinleri kapsayan bounds — boşsa Türkiye ortasını varsayılan yap.
+const bounds =
+  postings.length > 0
+    ? L.latLngBounds(postings.map((p) => p.coords))
+    : L.latLngBounds([36, 26], [42, 45])
+
+// Pinleri ekrana sığdıran yardımcı bileşen — viewport'a göre padding.
+function FitBounds() {
+  const map = useMap()
+
+  useEffect(() => {
+    const fit = () => {
+      const isMobile = window.innerWidth < 640
+      map.fitBounds(bounds, {
+        paddingTopLeft: isMobile ? [16, 16] : [60, 60],
+        paddingTopRight: isMobile ? [16, 16] : [60, 60],
+        maxZoom: isMobile ? 6 : 8,
+      })
+    }
+    fit()
+    map.on("resize", fit)
+    return () => map.off("resize", fit)
+  }, [map])
+
+  return null
+}
 
 export default function PostingMap() {
   return (
@@ -44,6 +72,7 @@ export default function PostingMap() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
+          <FitBounds />
           {postings.map((posting) => (
             <Marker
               key={posting.id}

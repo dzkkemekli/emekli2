@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom"
 import { Menu } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { navLinks } from "@/data/nav"
+import { navLinks } from "@/config/site"
 import { Button } from "@/components/ui/button"
 import {
   Sheet,

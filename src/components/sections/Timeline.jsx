@@ -1,6 +1,6 @@
 import { motion } from "motion/react"
 
-import { career } from "@/data/career"
+import { career } from "@/config/site"
 import RankInsignia from "@/components/RankInsignia"
 
 export default function Timeline() {

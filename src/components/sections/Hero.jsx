@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import { motion } from "motion/react"
 import { ArrowRight, Medal, Images, MapPin } from "lucide-react"
 
-import { profile } from "@/data/profile"
+import { profile } from "@/config/site"
 import { Button } from "@/components/ui/button"
 import TextureOverlay from "@/components/sections/TextureOverlay"
 import { useCountUp } from "@/lib/useCountUp"

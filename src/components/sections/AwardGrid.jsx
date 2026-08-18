@@ -3,7 +3,7 @@ import { motion } from "motion/react"
 import Lightbox from "yet-another-react-lightbox"
 import { Medal, ZoomIn } from "lucide-react"
 
-import { awards } from "@/data/awards"
+import { awards } from "@/config/site"
 
 export default function AwardGrid() {
   const [open, setOpen] = useState(false)

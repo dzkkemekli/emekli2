@@ -1,4 +1,4 @@
-import { rankInsigniaMap } from "@/data/ranks"
+import { rankInsigniaMap } from "@/config/site"
 import { cn } from "@/lib/utils"
 
 // Türk astsubay nişanını SVG olarak çizer.

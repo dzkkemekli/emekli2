@@ -5,8 +5,7 @@ import SectionHeading from "@/components/sections/SectionHeading"
 import Timeline from "@/components/sections/Timeline"
 import RankLadder from "@/components/sections/RankLadder"
 import DocumentFrame from "@/components/sections/DocumentFrame"
-import { profile } from "@/data/profile"
-import { career } from "@/data/career"
+import { profile, career } from "@/config/site"
 
 export default function Ozgecmis() {
   const firstRank = career[0]?.rank

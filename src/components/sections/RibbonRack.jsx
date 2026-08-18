@@ -1,6 +1,6 @@
 import { motion } from "motion/react"
 
-import { awards } from "@/data/awards"
+import { awards } from "@/config/site"
 
 // Askeri ribbon rack — renkli şerit barları.
 // Tıklayınca ilgili ödül kartına kayar (id bazlı).
