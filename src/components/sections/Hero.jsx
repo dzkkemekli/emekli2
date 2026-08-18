@@ -5,6 +5,7 @@ import { ArrowRight, Medal, Images, MapPin } from "lucide-react"
 import { profile } from "@/config/site"
 import { Button } from "@/components/ui/button"
 import TextureOverlay from "@/components/sections/TextureOverlay"
+import RetirementCounter from "@/components/sections/RetirementCounter"
 import { useCountUp } from "@/lib/useCountUp"
 
 function StatItem({ stat }) {
@@ -88,6 +89,8 @@ export default function Hero() {
               </Link>
             </Button>
           </motion.div>
+
+          <RetirementCounter />
 
           {/* Hizmet özeti — sayar */}
           <motion.dl
