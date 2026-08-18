@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom"
 import { motion } from "motion/react"
-import { ScrollText, MapPin, Medal, ArrowRight } from "lucide-react"
-
-import VideoShorts from "@/components/sections/VideoShorts"
+import { ScrollText, MapPin, Medal, Images, ArrowRight } from "lucide-react"
 
 const sections = [
   {
@@ -22,6 +20,12 @@ const sections = [
     title: "Takdir ve Ödüller",
     description: "Hizmet süresince alınan takdirnameler, beratlar ve ödüller.",
     icon: Medal,
+  },
+  {
+    to: "/galeri",
+    title: "Galeri",
+    description: "Yıllara yayılan fotoğraf ve video arşivinden bir seçki.",
+    icon: Images,
   },
 ]
 
@@ -65,7 +69,6 @@ export default function SectionOverview() {
             </Link>
           </motion.div>
         ))}
-        <VideoShorts />
       </div>
     </section>
   )

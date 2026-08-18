@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react"
 import { motion, AnimatePresence } from "motion/react"
-import { Play, X, Clapperboard } from "lucide-react"
+import { Play, X } from "lucide-react"
 
 import { videoShorts } from "@/config/site"
 import { cn } from "@/lib/utils"
@@ -37,34 +37,25 @@ export default function VideoShorts() {
 
   return (
     <>
-      <motion.div
+      <motion.ul
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-60px" }}
-        transition={{ duration: 0.4, delay: 0.18 }}
-        className="group flex h-full flex-col gap-4 rounded-lg border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-md"
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.4 }}
+        className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4"
       >
-        <div className="flex items-center justify-between">
-          <span className="flex size-11 items-center justify-center rounded-md bg-primary/10 text-primary">
-            <Clapperboard className="size-5" />
-          </span>
-          <span className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-            {videoShorts.length} video
-          </span>
-        </div>
-        <div>
-          <h3 className="font-serif text-xl font-semibold">Anı Videoları</h3>
-          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-            Yıllardan kalma kısa anı filmleri.
-          </p>
-        </div>
-        <ul className="mt-auto flex gap-2">
-          {videoShorts.map((v) => (
-            <li key={v.id} className="flex-1">
+        {videoShorts.map((v, i) => (
+          <li key={v.id}>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.96 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.35, delay: (i % 4) * 0.05 }}
+            >
               <button
                 type="button"
                 onClick={() => setActive(v)}
-                className="group/thumb relative block aspect-square w-full overflow-hidden rounded-md border border-border bg-black cursor-pointer"
+                className="group/thumb relative block aspect-video w-full overflow-hidden rounded-lg border border-border bg-black cursor-pointer"
               >
                 {getThumb(v) ? (
                   <img
@@ -75,18 +66,23 @@ export default function VideoShorts() {
                   />
                 ) : (
                   <div className="flex size-full items-center justify-center bg-gradient-to-br from-secondary/30 to-muted">
-                    <Play className="size-5 text-primary/50" />
+                    <Play className="size-8 text-primary/50" />
                   </div>
                 )}
                 <span className="absolute inset-0 bg-black/20 transition-opacity group-hover/thumb:bg-black/35" />
-                <span className="absolute left-1/2 top-1/2 flex size-7 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-background/90 text-primary shadow transition-transform group-hover/thumb:scale-110">
-                  <Play className="size-3.5" />
+                <span className="absolute left-1/2 top-1/2 flex size-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-background/90 text-primary shadow transition-transform group-hover/thumb:scale-110">
+                  <Play className="size-5" />
+                </span>
+                <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-3 text-left">
+                  <span className="block truncate text-xs text-white sm:text-sm">
+                    {v.title}
+                  </span>
                 </span>
               </button>
-            </li>
-          ))}
-        </ul>
-      </motion.div>
+            </motion.div>
+          </li>
+        ))}
+      </motion.ul>
 
       <AnimatePresence>
         {active && getEmbed(active) && (
