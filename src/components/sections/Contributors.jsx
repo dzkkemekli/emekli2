@@ -11,7 +11,7 @@ export default function Contributors() {
         <div className="mb-8 flex items-center gap-2">
           <Heart className="size-4 text-primary" />
           <h2 className="font-serif text-xl font-semibold text-foreground">
-            Emeği Geçenler
+            Emeği Geçen Silah Arkadaşları
           </h2>
           <span className="ml-auto text-xs uppercase tracking-[0.18em] text-muted-foreground">
             {contributors.length} kişi

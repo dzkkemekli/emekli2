@@ -311,7 +311,7 @@ export const gallery = [
 ]
 
 // ----------------------------------------------------------------------------
-//  EMEĞİ GEÇENLER  (Sayfa altı — katkıda bulunanlar)
+//  EMEĞİ GEÇEN SİLAH ARKADAŞLARI  (Sayfa altı — katkıda bulunanlar)
 // ----------------------------------------------------------------------------
 export const contributors = [
   { id: 1, name: "Yunus Ağabey", role: "Anıların sahibi" },
