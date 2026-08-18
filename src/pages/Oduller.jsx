@@ -1,5 +1,4 @@
 import SectionHeading from "@/components/sections/SectionHeading"
-import RibbonRack from "@/components/sections/RibbonRack"
 import AwardGrid from "@/components/sections/AwardGrid"
 
 export default function Oduller() {
@@ -11,7 +10,6 @@ export default function Oduller() {
         description="Hizmet süresince kazanılan takdirnameler, beratlar ve madalyalar. Bir ömürlük hizmetin yazılı tescilleri."
       />
       <div className="mt-12 space-y-10">
-        <RibbonRack />
         <AwardGrid />
       </div>
     </section>
