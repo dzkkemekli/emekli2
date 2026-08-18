@@ -6,11 +6,11 @@ import { MapPin, Calendar, Building2, Images } from "lucide-react"
 import { postings } from "@/config/site"
 
 export default function PostingGrid() {
-  const [lightbox, setLightbox] = useState({ open: false, index: 0 })
+  const [lightbox, setLightbox] = useState({ open: false, index: 0, slides: [] })
 
   const openLightbox = (slides, index) => {
     if (slides.length === 0) return
-    setLightbox({ open: true, index })
+    setLightbox({ open: true, index, slides })
   }
 
   return (
@@ -86,9 +86,7 @@ export default function PostingGrid() {
         open={lightbox.open}
         index={lightbox.index}
         close={() => setLightbox((s) => ({ ...s, open: false }))}
-        slides={postings.flatMap((p) =>
-          (p.gallery.length > 0 ? p.gallery : [p.image]).filter(Boolean).map((s) => ({ src: s }))
-        )}
+        slides={lightbox.slides}
       />
     </>
   )

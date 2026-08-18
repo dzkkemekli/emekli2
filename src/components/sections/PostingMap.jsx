@@ -51,7 +51,7 @@ export default function PostingMap() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.45 }}
-      className="overflow-hidden rounded-lg border border-border bg-card shadow-sm"
+      className="relative isolate overflow-hidden rounded-lg border border-border bg-card shadow-sm"
     >
       <div className="flex items-center gap-2 border-b border-border px-4 py-3">
         <MapPin className="size-4 text-primary" />
