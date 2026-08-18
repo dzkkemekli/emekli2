@@ -55,16 +55,16 @@ export default function VideoShorts() {
         <div>
           <h3 className="font-serif text-xl font-semibold">Anı Videoları</h3>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-            Yıllardan kalma kısa anı filmleri. Dokunarak izleyin.
+            Yıllardan kalma kısa anı filmleri.
           </p>
         </div>
-        <ul className="mt-1 grid grid-cols-2 gap-3">
+        <ul className="mt-auto flex gap-2">
           {videoShorts.map((v) => (
-            <li key={v.id}>
+            <li key={v.id} className="flex-1">
               <button
                 type="button"
                 onClick={() => setActive(v)}
-                className="group/thumb relative block aspect-video w-full overflow-hidden rounded-md border border-border bg-black cursor-pointer"
+                className="group/thumb relative block aspect-square w-full overflow-hidden rounded-md border border-border bg-black cursor-pointer"
               >
                 {getThumb(v) ? (
                   <img
@@ -75,12 +75,12 @@ export default function VideoShorts() {
                   />
                 ) : (
                   <div className="flex size-full items-center justify-center bg-gradient-to-br from-secondary/30 to-muted">
-                    <Play className="size-6 text-primary/50" />
+                    <Play className="size-5 text-primary/50" />
                   </div>
                 )}
                 <span className="absolute inset-0 bg-black/20 transition-opacity group-hover/thumb:bg-black/35" />
-                <span className="absolute left-1/2 top-1/2 flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-background/90 text-primary shadow transition-transform group-hover/thumb:scale-110">
-                  <Play className="size-4" />
+                <span className="absolute left-1/2 top-1/2 flex size-7 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-background/90 text-primary shadow transition-transform group-hover/thumb:scale-110">
+                  <Play className="size-3.5" />
                 </span>
               </button>
             </li>
