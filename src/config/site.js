@@ -52,6 +52,8 @@ export const profile = {
     { label: "Görev Yeri", value: 5 },
     { label: "Takdir & Ödül", value: 6 },
   ],
+  // Navbar başlığı
+  brand: { initial: "Ö", subtitle: "Anı & Hizmet" },
 }
 
 // ----------------------------------------------------------------------------

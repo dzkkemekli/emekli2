@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom"
 import { Menu } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { navLinks } from "@/config/site"
+import { navLinks, profile } from "@/config/site"
 import { Button } from "@/components/ui/button"
 import {
   Sheet,
@@ -28,12 +28,12 @@ export default function Navbar() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
           <span className="flex size-9 items-center justify-center rounded-md bg-primary text-primary-foreground font-serif text-lg font-semibold">
-            Y
+            {profile.brand.initial}
           </span>
           <span className="flex flex-col leading-none">
-            <span className="font-serif text-lg font-semibold text-foreground">Yunus Ağabey</span>
+            <span className="font-serif text-lg font-semibold text-foreground">{profile.name}</span>
             <span className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
-              Anı &amp; Hizmet
+              {profile.brand.subtitle}
             </span>
           </span>
         </Link>
