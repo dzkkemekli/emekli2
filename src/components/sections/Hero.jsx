@@ -82,10 +82,10 @@ export default function Hero() {
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <Link to="/galeri">
+              <a href="#galeri">
                 <Images />
                 Galeriyi Aç
-              </Link>
+              </a>
             </Button>
           </motion.div>
 
