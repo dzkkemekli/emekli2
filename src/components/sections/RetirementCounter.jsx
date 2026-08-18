@@ -77,7 +77,7 @@ export default function RetirementCounter() {
           initial={{ opacity: 0, y: 4 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.25 }}
-          className="font-serif text-base font-semibold tabular-nums text-primary"
+          className="text-base font-semibold tabular-nums text-primary"
         >
           {countedDays}
         </motion.span>{" "}
