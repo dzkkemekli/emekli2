@@ -2,6 +2,8 @@ import { Link } from "react-router-dom"
 import { motion } from "motion/react"
 import { ScrollText, MapPin, Medal, ArrowRight } from "lucide-react"
 
+import VideoShorts from "@/components/sections/VideoShorts"
+
 const sections = [
   {
     to: "/ozgecmis",
@@ -63,6 +65,7 @@ export default function SectionOverview() {
             </Link>
           </motion.div>
         ))}
+        <VideoShorts />
       </div>
     </section>
   )

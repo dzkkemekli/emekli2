@@ -279,6 +279,17 @@ export const featuredVideo = {
 }
 
 // ----------------------------------------------------------------------------
+//  KISA VİDEO SEÇKİSİ  (Anasayfa derleme kartında küçük thumbnail'lar)
+//  provider: "youtube"  |  id: video kimliği  |  thumbnail: boşsa YouTube'tan alınır
+// ----------------------------------------------------------------------------
+export const videoShorts = [
+  { id: "v1", provider: "youtube", videoId: "OUM1GL8iboM", title: "Hizmet Yıllarından Kesitler" },
+  { id: "v2", provider: "youtube", videoId: "dQw4w9WgXcQ", title: "Tören Günü" },
+  { id: "v3", provider: "youtube", videoId: "9bZkp7q19f0", title: "Birlik Anıları" },
+  { id: "v4", provider: "youtube", videoId: "kJQP7kiw5Fk", title: "Veda Töreni" },
+]
+
+// ----------------------------------------------------------------------------
 //  GALERİ  (Galeri sayfası — karosel / akış / ızgara + lightbox)
 //  type: "photo" | "video"
 //  src:  photo → görsel yolu, video → mp4 yolu
@@ -346,6 +357,7 @@ const site = {
   awards,
   gallery,
   featuredVideo,
+  videoShorts,
   contributors,
 }
 
