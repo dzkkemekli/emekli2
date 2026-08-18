@@ -38,8 +38,8 @@ const images = {
 //  KİŞİSEL BİLGİLER  (Hero + Özgeçmiş)
 // ----------------------------------------------------------------------------
 export const profile = {
-  name: "ÖMER ALP",
-  rank: "Emekli Astsubay",
+  name: "Cemalettin ÇİFTÇİ",
+  rank: "TUĞAMİRAL",
   tagline: "Bir ömür vatan uğruna, anılara yazılmış hizmet.",
   shortBio:
     "Yıllar boyunca çeşitli birliklerde görev yapmış, görevini şerefle ifa etmiş bir askerin anıları, hizmet yerleri ve takdir edilen değerleri bir araya getiren saygı anıtı.",
@@ -48,12 +48,12 @@ export const profile = {
   retirementDate: "2026-08-17",
   // Hizmet özeti — Hero'daki sayaç istatistikleri
   stats: [
-    { label: "Hizmet Yılı", value: 35 },
+    { label: "Hizmet Yılı", value: 39 },
     { label: "Görev Yeri", value: 5 },
     { label: "Takdir & Ödül", value: 6 },
   ],
   // Navbar başlığı
-  brand: { initial: "Ö", subtitle: "Anı & Hizmet" },
+  brand: { initial: "C", subtitle: "Anı & Hizmet" },
 }
 
 // ----------------------------------------------------------------------------
