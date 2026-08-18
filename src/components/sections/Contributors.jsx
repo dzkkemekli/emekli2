@@ -2,6 +2,7 @@ import { motion } from "motion/react"
 import { Heart } from "lucide-react"
 
 import { contributors } from "@/config/site"
+import { cn } from "@/lib/utils"
 
 export default function Contributors() {
   return (
@@ -12,23 +13,29 @@ export default function Contributors() {
           <h2 className="font-serif text-xl font-semibold text-foreground">
             Emeği Geçenler
           </h2>
+          <span className="ml-auto text-xs uppercase tracking-[0.18em] text-muted-foreground">
+            {contributors.length} kişi
+          </span>
         </div>
-        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid grid-cols-2 gap-x-4 gap-y-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
           {contributors.map((person, i) => (
             <motion.li
               key={person.id}
-              initial={{ opacity: 0, y: 14 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.35, delay: i * 0.06 }}
-              className="rounded-lg border border-border bg-background/60 p-4"
+              viewport={{ once: true, margin: "-30px" }}
+              transition={{ duration: 0.3, delay: (i % 10) * 0.04 }}
+              className={cn(
+                "flex flex-col rounded-md border border-border bg-background/60 px-3 py-2.5",
+                "transition-colors hover:border-primary/40 hover:bg-background"
+              )}
             >
-              <p className="font-serif text-base font-semibold text-foreground">
+              <span className="truncate text-sm font-medium text-foreground">
                 {person.name}
-              </p>
-              <p className="mt-1 text-xs uppercase tracking-[0.14em] text-muted-foreground">
+              </span>
+              <span className="mt-0.5 truncate text-[11px] uppercase tracking-[0.12em] text-muted-foreground">
                 {person.role}
-              </p>
+              </span>
             </motion.li>
           ))}
         </ul>
