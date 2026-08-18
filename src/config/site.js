@@ -16,19 +16,22 @@
 //    - video: src = mp4 yolu, poster = kapak karesi (opsiyonel)
 // ============================================================================
 
+const BASE = import.meta.env.BASE_URL
+const img = (p) => `${BASE}images/${p}`
+
 const images = {
   // — Test görselleri (gerçek fotoğraflarla değiştirin) —
-  foto1: "/images/foto-1.jpeg",
-  foto2: "/images/foto-2.jpeg",
-  foto3: "/images/foto-3.jpeg",
-  foto4: "/images/foto-4.jpeg",
+  foto1: img("foto-1.jpeg"),
+  foto2: img("foto-2.jpeg"),
+  foto3: img("foto-3.jpeg"),
+  foto4: img("foto-4.jpeg"),
 
   // — Portre —
   // src/assets/portrait.jpg yerine public/images/ altına koyun
-  portrait: "/images/foto-1.jpeg",
+  portrait: img("foto-1.jpeg"),
 
   // — Yeni görselleri buraya ekleyin —
-  // ornekFoto: "/images/ornek.jpg",
+  // ornekFoto: img("ornek.jpg"),
 }
 
 // ----------------------------------------------------------------------------
