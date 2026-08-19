@@ -73,12 +73,11 @@ export const navLinks = [
 //            retired (emekli rozeti)
 // ----------------------------------------------------------------------------
 export const rankInsigniaMap = {
-  "Astsubay Çavuş": { chevrons: 1, arc: false, stars: 0 },
-  "Astsubay Üstçavuş": { chevrons: 2, arc: false, stars: 0 },
-  "Astsubay Kıdemli Üstçavuş": { chevrons: 3, arc: false, stars: 0 },
-  "Astsubay Başçavuş": { chevrons: 3, arc: true, stars: 0 },
-  "Astsubay Kıdemli Başçavuş": { chevrons: 3, arc: true, stars: 1 },
-  "Emekli Astsubay": { chevrons: 3, arc: true, stars: 1, retired: true },
+  "Yüzbaşı": { chevrons: 1, arc: false, stars: 0 },
+  "Binbaşı": { chevrons: 2, arc: false, stars: 0 },
+  "Yarbay": { chevrons: 3, arc: false, stars: 0 },
+  "Albay": { chevrons: 3, arc: true, stars: 1 },
+  "TUĞAMİRAL": { chevrons: 3, arc: true, stars: 1, retired: true },
 }
 
 export const rankOrder = [
