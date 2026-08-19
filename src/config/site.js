@@ -311,6 +311,7 @@ export const featuredVideo = {
 //  caption: açıklama (opsiyonel)
 // ----------------------------------------------------------------------------
 export const gallery = [
+  { id: 0, type: "photo", src: images.main },
   { id: 1, type: "photo", src: images.foto1 },
   { id: 2, type: "photo", src: images.foto2 },
   { id: 3, type: "photo", src: images.foto3 },
