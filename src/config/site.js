@@ -330,18 +330,22 @@ export const gallery = [
 //  EMEĞİ GEÇEN SİLAH ARKADAŞLARI  (Sayfa altı — katkıda bulunanlar)
 // ----------------------------------------------------------------------------
 export const contributors = [
-  { id: 1, name: "Mehmet KASAR", role: "ASB.KD.BÇVŞ" },
-  { id: 2, name: "Muhammet KİRAZ", role: "ASB.KD.BÇVŞ" },
-  { id: 3, name: "İbrahim ÖZNUR", role: "ASB.KD.BÇVŞ" },
-  { id: 4, name: "Oktay OKUMUŞ", role: "ASB.KD.BÇVŞ" },
-  { id: 5, name: "Ömer Adil UZUNOĞLU", role: "ASB.KD.BÇVŞ" },
-  { id: 6, name: "Eray ÖZGÜNEŞLİ", role: "ASB.KD.BÇVŞ" },
-  { id: 7, name: "Ahmet OKKİRMAN", role: "ASB.KD.BÇVŞ" },
-  { id: 8, name: "Alper KIZILLAR", role: "ASB.KD.BÇVŞ" },
-  { id: 9, name: "Kamil KAVRUK", role: "ASB.KD.BÇVŞ" },
-  { id: 10, name: "Mehmet Özer ÇALIŞKAN", role: "ASB.KD.BÇVŞ" },
-  { id: 11, name: "Bayram KOCABEKİR", role: "ASB.KD.BÇVŞ" },
-  { id: 12, name: "Önder YÜCEL", role: "ASB.KD.ÜÇVŞ" },
+  { id: 1, name: "Mustafa CAN" },
+  { id: 2, name: "İsmail Alparslan" },
+  { id: 3, name: "Kadir KARINCALI" },
+  { id: 4, name: "Fatih KILIÇ" },
+  { id: 5, name: "Mehmet KASAR" },
+  { id: 6, name: "Muhammet KİRAZ" },
+  { id: 7, name: "İbrahim ÖZNUR" },
+  { id: 8, name: "Oktay OKUMUŞ" },
+  { id: 9, name: "Ömer Adil UZUNOĞLU" },
+  { id: 10, name: "Eray ÖZGÜNEŞLİ" },
+  { id: 11, name: "Ahmet OKKİRMAN" },
+  { id: 12, name: "Alper KIZILLAR" },
+  { id: 13, name: "Kamil KAVRUK" },
+  { id: 14, name: "Mehmet Özer ÇALIŞKAN" },
+  { id: 15, name: "Bayram KOCABEKİR" },
+  { id: 16, name: "Önder YÜCEL" },
 ]
 
 // ----------------------------------------------------------------------------

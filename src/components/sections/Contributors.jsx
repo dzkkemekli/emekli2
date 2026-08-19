@@ -33,9 +33,6 @@ export default function Contributors() {
               <span className="truncate text-sm font-medium text-foreground">
                 {person.name}
               </span>
-              <span className="mt-0.5 truncate text-[11px] uppercase tracking-[0.12em] text-muted-foreground">
-                {person.role}
-              </span>
             </motion.li>
           ))}
         </ul>
