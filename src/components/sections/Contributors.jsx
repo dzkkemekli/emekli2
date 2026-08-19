@@ -37,6 +37,9 @@ export default function Contributors() {
           ))}
         </ul>
       </div>
+      <footer className="border-t border-border/70 py-4 text-center text-[10px] uppercase tracking-[0.3em] text-muted-foreground/70">
+        3D SEPET
+      </footer>
     </section>
   )
 }
