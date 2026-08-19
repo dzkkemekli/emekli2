@@ -11,24 +11,22 @@
 //    3. İlgili bölümde `images.yeniFoto` olarak kullanın.
 //
 //  GÖRSEL YOLLARI her zaman `/images/...` ile başlar (public/ klasörü köktür).
-//  Desteklenen type değerleri: "photo" | "video"
-//    - photo: src = görsel yolu
-//    - video: src = mp4 yolu, poster = kapak karesi (opsiyonel)
+//  Galeri type değeri: "photo" — src = görsel yolu
 // ============================================================================
 
 const BASE = import.meta.env.BASE_URL
 const img = (p) => `${BASE}images/${p}`
 
 const images = {
-  // — Test görselleri (gerçek fotoğraflarla değiştirin) —
+  // — Portre (ana görsel) —
+  main: img("main.jpeg"),
+  portrait: img("main.jpeg"),
+
+  // — Galeri görselleri —
   foto1: img("foto-1.jpeg"),
   foto2: img("foto-2.jpeg"),
   foto3: img("foto-3.jpeg"),
   foto4: img("foto-4.jpeg"),
-
-  // — Portre —
-  // src/assets/portrait.jpg yerine public/images/ altına koyun
-  portrait: img("foto-1.jpeg"),
 
   // — Yeni görselleri buraya ekleyin —
   // ornekFoto: img("ornek.jpg"),
@@ -50,7 +48,6 @@ export const profile = {
   stats: [
     { label: "Hizmet Yılı", value: 35 },
     { label: "Görev Yeri", value: 8 },
-    { label: "Takdir & Ödül", value: 6 },
   ],
   // Navbar başlığı
   brand: { initial: "C", subtitle: "Anı & Hizmet" },
@@ -63,7 +60,6 @@ export const navLinks = [
   { to: "/", label: "Anasayfa" },
   { to: "/ozgecmis", label: "Özgeçmiş" },
   { to: "/gorevler", label: "Görev Yapılan Yerler" },
-  { to: "/oduller", label: "Takdir ve Ödüller" },
   { to: "/galeri", label: "Galeri" },
 ]
 
@@ -285,68 +281,6 @@ export const postings = [
 ]
 
 // ----------------------------------------------------------------------------
-//  TAKDİR VE ÖDÜLLER  (Ödüller sayfası — grid + ribbon rack)
-//  ribbon: { center, left, right } — Şeref şeridi renkleri (hex)
-//  image: sertifika/berat fotoğrafı (opsiyonel)
-// ----------------------------------------------------------------------------
-export const awards = [
-  {
-    id: "takdir-1",
-    title: "Üstün Başarı Takdirnamesi",
-    issuer: "Tugay Komutanlığı",
-    date: "1990",
-    description: "Gösterdiği üstün başarı ve fedakârlıktan dolayı verilen takdirname.",
-    image: images.foto1,
-    ribbon: { center: "#4a5d23", left: "#6b7a3a", right: "#6b7a3a" },
-  },
-  {
-    id: "berat-1",
-    title: "Şeref Beratı",
-    issuer: "Alay Komutanlığı",
-    date: "1995",
-    description: "Hizmette gösterilen bağlılık ve özverinin tescili.",
-    image: images.foto2,
-    ribbon: { center: "#1b2a41", left: "#2a3a5a", right: "#2a3a5a" },
-  },
-  {
-    id: "madalya-1",
-    title: "Vatan Hizmeti Madalyası",
-    issuer: "Genelkurmay Başkanlığı",
-    date: "2005",
-    description: "Uzun yıllar sürdürülen başarılı hizmetin taltifi.",
-    image: images.foto3,
-    ribbon: { center: "#b8860b", left: "#d4af37", right: "#8b6914" },
-  },
-  {
-    id: "takdir-2",
-    title: "Görev Başarısı Sertifikası",
-    issuer: "Tabur Komutanlığı",
-    date: "2008",
-    description: "Operasyonel görevlerde gösterilen başarı.",
-    image: images.foto4,
-    ribbon: { center: "#8b2e2e", left: "#b94545", right: "#6b2222" },
-  },
-  {
-    id: "berat-2",
-    title: "Kıdem Hizmet Beratı",
-    issuer: "Lojistik Komutanlığı",
-    date: "2015",
-    description: "Kıdemli yıllarda hizmetin sürekliliği ve özveri.",
-    image: images.foto1,
-    ribbon: { center: "#2e5d4a", left: "#3a7a5a", right: "#224433" },
-  },
-  {
-    id: "madalya-2",
-    title: "Hizmet Şeref Madalyası",
-    issuer: "Genelkurmay Başkanlığı",
-    date: "2019",
-    description: "Emekliliğe yakın dönemde tüm hizmetlerin özet taltifi.",
-    image: images.foto2,
-    ribbon: { center: "#5a4a2a", left: "#8b7340", right: "#4a3a20" },
-  },
-]
-
-// ----------------------------------------------------------------------------
 //  ÖNE ÇIKAN VİDEO  (Anasayfa video bölümü — thumbnail + play → modal)
 //  provider: "youtube" | "vimeo"  (şimdilik youtube)
 //  id: video kimliği (YouTube URL'sindeki ?v= sonrası)
@@ -362,32 +296,16 @@ export const featuredVideo = {
 }
 
 // ----------------------------------------------------------------------------
-//  KISA VİDEO SEÇKİSİ  (Anasayfa derleme kartında küçük thumbnail'lar)
-//  provider: "youtube"  |  id: video kimliği  |  thumbnail: boşsa YouTube'tan alınır
-// ----------------------------------------------------------------------------
-export const videoShorts = [
-  { id: "v1", provider: "youtube", videoId: "OUM1GL8iboM", title: "Hizmet Yıllarından Kesitler" },
-  { id: "v2", provider: "youtube", videoId: "dQw4w9WgXcQ", title: "Tören Günü" },
-  { id: "v3", provider: "youtube", videoId: "9bZkp7q19f0", title: "Birlik Anıları" },
-  { id: "v4", provider: "youtube", videoId: "kJQP7kiw5Fk", title: "Veda Töreni" },
-]
-
-// ----------------------------------------------------------------------------
 //  GALERİ  (Galeri sayfası — karosel / akış / ızgara + lightbox)
-//  type: "photo" | "video"
-//  src:  photo → görsel yolu, video → mp4 yolu
-//  poster: video için kapak karesi (opsiyonel)
+//  type: "photo"
+//  src:  photo → görsel yolu
 //  caption: açıklama (opsiyonel)
 // ----------------------------------------------------------------------------
 export const gallery = [
-  { id: 1, type: "photo", src: images.foto1, caption: "Birlik fotoğrafı" },
-  { id: 2, type: "photo", src: images.foto2, caption: "Tören günü" },
-  { id: 3, type: "photo", src: images.foto3, caption: "Sınır karakolu" },
-  { id: 4, type: "photo", src: images.foto4, caption: "Eğitim manevrası" },
-  { id: 5, type: "photo", src: images.foto1, caption: "Arkadaşlarla anı" },
-  { id: 6, type: "photo", src: images.foto2, caption: "Birlik içi etkinlik" },
-  { id: 7, type: "photo", src: images.foto3, caption: "Hizmet yıldönümü" },
-  { id: 8, type: "photo", src: images.foto4, caption: "Veda töreni" },
+  { id: 1, type: "photo", src: images.foto1 },
+  { id: 2, type: "photo", src: images.foto2 },
+  { id: 3, type: "photo", src: images.foto3 },
+  { id: 4, type: "photo", src: images.foto4 },
 ]
 
 // ----------------------------------------------------------------------------
@@ -437,10 +355,8 @@ const site = {
   rankOrder,
   career,
   postings,
-  awards,
   gallery,
   featuredVideo,
-  videoShorts,
   contributors,
 }
 

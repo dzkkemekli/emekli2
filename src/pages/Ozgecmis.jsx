@@ -5,12 +5,9 @@ import SectionHeading from "@/components/sections/SectionHeading"
 import Timeline from "@/components/sections/Timeline"
 import RankLadder from "@/components/sections/RankLadder"
 import DocumentFrame from "@/components/sections/DocumentFrame"
-import { profile, career } from "@/config/site"
+import { profile } from "@/config/site"
 
 export default function Ozgecmis() {
-  const firstRank = career[0]?.rank
-  const lastRank = career[career.length - 1]?.rank
-
   return (
     <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
       <SectionHeading
@@ -48,15 +45,6 @@ export default function Ozgecmis() {
             </div>
             <aside className="lg:sticky lg:top-24 lg:self-start">
               <RankLadder />
-              <div className="mt-6 rounded-md border border-border bg-background/60 p-4 text-xs leading-relaxed text-muted-foreground">
-                <p className="font-semibold text-foreground">Hizmet Özeti</p>
-                <p className="mt-1.5">
-                  Başlangıç: <span className="text-foreground">{firstRank}</span>
-                </p>
-                <p>
-                  Son rütbe: <span className="text-foreground">{lastRank}</span>
-                </p>
-              </div>
             </aside>
           </div>
         </DocumentFrame>

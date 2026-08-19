@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { motion } from "motion/react"
-import { ScrollText, MapPin, Medal, Images, ArrowRight } from "lucide-react"
+import { ScrollText, MapPin, Images, ArrowRight } from "lucide-react"
 
 const sections = [
   {
@@ -16,15 +16,9 @@ const sections = [
     icon: MapPin,
   },
   {
-    to: "/oduller",
-    title: "Takdir ve Ödüller",
-    description: "Hizmet süresince alınan takdirnameler, beratlar ve ödüller.",
-    icon: Medal,
-  },
-  {
     to: "/galeri",
     title: "Galeri",
-    description: "Yıllara yayılan fotoğraf ve video arşivinden bir seçki.",
+    description: "Yıllara yayılan fotoğraf arşivinden bir seçki.",
     icon: Images,
   },
 ]
