@@ -346,7 +346,9 @@ export const contributors = [
   { id: 14, name: "Kadir KARINCALI" },
   { id: 15, name: "İsmail Alparslan" },
   { id: 16, name: "Fatih KILIÇ" },
-  { id: 17, name: "Yunus Emre SEPETCİ" },
+  { id: 17, name: "Oktay OKUMUŞ" },
+  { id: 18, name: "Önder YÜCEL" },
+  { id: 19, name: "Yunus Emre SEPETCİ" },
 ]
 
 // ----------------------------------------------------------------------------
