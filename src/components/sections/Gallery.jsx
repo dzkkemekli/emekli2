@@ -438,6 +438,8 @@ export default function Gallery() {
               spaceBetween={16}
               slidesPerView={1.2}
               freeMode
+              observer
+              observeParents
               pagination={{ clickable: true }}
               breakpoints={{
                 640: { slidesPerView: 2.2 },
