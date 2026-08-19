@@ -3,7 +3,6 @@ import { ShieldCheck } from "lucide-react"
 
 import SectionHeading from "@/components/sections/SectionHeading"
 import Timeline from "@/components/sections/Timeline"
-import RankLadder from "@/components/sections/RankLadder"
 import DocumentFrame from "@/components/sections/DocumentFrame"
 import { profile } from "@/config/site"
 
@@ -38,14 +37,9 @@ export default function Ozgecmis() {
             <div className="mx-auto mt-4 h-px w-40 bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
           </motion.div>
 
-          {/* Rütbe merdiveni (masaüstünde yan, mobilde üst) */}
-          <div className="grid gap-10 lg:grid-cols-[1fr_220px] lg:gap-14">
-            <div>
-              <Timeline />
-            </div>
-            <aside className="lg:sticky lg:top-24 lg:self-start">
-              <RankLadder />
-            </aside>
+          {/* Zaman çizelgesi */}
+          <div>
+            <Timeline />
           </div>
         </DocumentFrame>
       </div>
