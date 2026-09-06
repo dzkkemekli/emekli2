@@ -7,7 +7,7 @@ import path from 'node:path'
 export default defineConfig({
   // GitHub Pages alt yolunda servis edildiği için tabanı repo adına ayarla.
   // Lokal/Dokploy'da kökten servis için VITE_BASE env ile override edilebilir.
-  base: process.env.VITE_BASE || '/amiral/',
+  base: process.env.VITE_BASE || '/emekli2/',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
