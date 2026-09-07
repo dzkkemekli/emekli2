@@ -36,6 +36,18 @@ const images = {
   foto11: img("foto-11.jpeg"),
   foto12: img("foto-12.jpeg"),
   foto13: img("foto-13.jpeg"),
+  foto14: img("foto-14.jpeg"),
+  foto15: img("foto-15.jpeg"),
+  foto16: img("foto-16.jpeg"),
+  foto17: img("foto-17.jpeg"),
+  foto18: img("foto-18.jpeg"),
+  foto19: img("foto-19.jpeg"),
+  foto20: img("foto-20.jpeg"),
+  foto21: img("foto-21.jpeg"),
+  foto22: img("foto-22.jpeg"),
+  foto23: img("foto-23.jpeg"),
+  foto24: img("foto-24.jpeg"),
+  foto25: img("foto-25.jpeg"),
 
   // — Yeni görselleri buraya ekleyin —
   // ornekFoto: img("ornek.jpg"),
@@ -325,6 +337,18 @@ export const gallery = [
   { id: 11, type: "photo", src: images.foto11 },
   { id: 12, type: "photo", src: images.foto12 },
   { id: 13, type: "photo", src: images.foto13 },
+  { id: 14, type: "photo", src: images.foto14 },
+  { id: 15, type: "photo", src: images.foto15 },
+  { id: 16, type: "photo", src: images.foto16 },
+  { id: 17, type: "photo", src: images.foto17 },
+  { id: 18, type: "photo", src: images.foto18 },
+  { id: 19, type: "photo", src: images.foto19 },
+  { id: 20, type: "photo", src: images.foto20 },
+  { id: 21, type: "photo", src: images.foto21 },
+  { id: 22, type: "photo", src: images.foto22 },
+  { id: 23, type: "photo", src: images.foto23 },
+  { id: 24, type: "photo", src: images.foto24 },
+  { id: 25, type: "photo", src: images.foto25 },
 ]
 
 // ----------------------------------------------------------------------------
