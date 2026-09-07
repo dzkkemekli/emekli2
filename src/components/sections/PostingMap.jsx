@@ -11,7 +11,7 @@ import { postings } from "@/config/site"
 // Vite ile leaflet marker ikonlarını düzelt
 const pinIcon = L.divIcon({
   className: "military-pin",
-  html: `<span style="display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--primary,#4a5d23);border:2px solid var(--background,#f6f4ee);box-shadow:0 2px 6px rgba(0,0,0,0.35)"><span style="transform:rotate(45deg);color:var(--background,#f6f4ee);font-size:13px;font-weight:700">★</span></span>`,
+  html: `<span style="display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--primary,#1b3a5c);border:2px solid var(--background,#f7f5f0);box-shadow:0 2px 6px rgba(0,0,0,0.35)"><span style="transform:rotate(45deg);color:var(--background,#f7f5f0);font-size:13px;font-weight:700">★</span></span>`,
   iconSize: [28, 28],
   iconAnchor: [14, 28],
   popupAnchor: [0, -26],
@@ -66,7 +66,7 @@ export default function PostingMap() {
           zoom={6}
           scrollWheelZoom={false}
           className="size-full"
-          style={{ background: "#e7e3d8" }}
+          style={{ background: "var(--muted, #e5e4dd)" }}
         >
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'

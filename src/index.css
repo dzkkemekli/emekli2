@@ -36,64 +36,64 @@
 :root {
   --radius: 0.5rem;
 
-  /* Military palette: olive/khaki primary, navy accent, warm stone neutrals */
-  --background: #f6f4ee;
-  --foreground: #2b2a26;
+  /* Naval palette: midnight navy primary, brass accent, ivory paper neutrals */
+  --background: #f7f5f0;
+  --foreground: #1c2433;
 
-  --card: #fbfaf6;
-  --card-foreground: #2b2a26;
+  --card: #fdfcf9;
+  --card-foreground: #1c2433;
 
-  --popover: #fbfaf6;
-  --popover-foreground: #2b2a26;
+  --popover: #fdfcf9;
+  --popover-foreground: #1c2433;
 
-  --primary: #4a5d23;
-  --primary-foreground: #f6f4ee;
+  --primary: #1b3a5c;
+  --primary-foreground: #f7f5f0;
 
-  --secondary: #1b2a41;
-  --secondary-foreground: #f6f4ee;
+  --secondary: #a8842c;
+  --secondary-foreground: #fffdf7;
 
-  --muted: #e7e3d8;
-  --muted-foreground: #6b675c;
+  --muted: #e5e4dd;
+  --muted-foreground: #5d6675;
 
-  --accent: #6b7a3a;
-  --accent-foreground: #f6f4ee;
+  --accent: #c9a24b;
+  --accent-foreground: #241c07;
 
   --destructive: #8b2e2e;
-  --destructive-foreground: #f6f4ee;
+  --destructive-foreground: #f7f5f0;
 
-  --border: #d9d4c5;
-  --input: #d9d4c5;
-  --ring: #4a5d23;
+  --border: #d8d6cc;
+  --input: #d8d6cc;
+  --ring: #1b3a5c;
 }
 
 .dark {
-  --background: #161a14;
-  --foreground: #e7e3d8;
+  --background: #0f1622;
+  --foreground: #e5e4dd;
 
-  --card: #1c2118;
-  --card-foreground: #e7e3d8;
+  --card: #16202f;
+  --card-foreground: #e5e4dd;
 
-  --popover: #1c2118;
-  --popover-foreground: #e7e3d8;
+  --popover: #16202f;
+  --popover-foreground: #e5e4dd;
 
-  --primary: #8fa057;
-  --primary-foreground: #161a14;
+  --primary: #6f9bc9;
+  --primary-foreground: #0f1622;
 
-  --secondary: #2a3a5a;
-  --secondary-foreground: #e7e3d8;
+  --secondary: #c9a24b;
+  --secondary-foreground: #1c1503;
 
-  --muted: #262b20;
-  --muted-foreground: #a8a294;
+  --muted: #212d3f;
+  --muted-foreground: #9aa5b4;
 
-  --accent: #6b7a3a;
-  --accent-foreground: #f6f4ee;
+  --accent: #c9a24b;
+  --accent-foreground: #1c1503;
 
   --destructive: #b94545;
-  --destructive-foreground: #f6f4ee;
+  --destructive-foreground: #f7f5f0;
 
-  --border: #2e3326;
-  --input: #2e3326;
-  --ring: #8fa057;
+  --border: #273447;
+  --input: #273447;
+  --ring: #6f9bc9;
 }
 
 @layer base {
