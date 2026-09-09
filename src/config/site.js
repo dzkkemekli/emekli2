@@ -17,6 +17,7 @@
 const BASE = import.meta.env.BASE_URL
 const img = (p) => `${BASE}images/${p}`
 const vid = (p) => `${BASE}videos/${p}`
+const vposter = (p) => `${BASE}videos/posters/${p}`
 
 const images = {
   // — Portre (ana görsel) —
@@ -352,16 +353,16 @@ export const gallery = [
   { id: 25, type: "photo", src: images.foto25 },
 
   // — Anı videoları —
-  { id: 27, type: "video", src: vid("video-1.mp4") },
-  { id: 28, type: "video", src: vid("video-2.mp4") },
-  { id: 29, type: "video", src: vid("video-3.mp4") },
-  { id: 30, type: "video", src: vid("video-4.mp4") },
-  { id: 31, type: "video", src: vid("video-5.mp4") },
-  { id: 32, type: "video", src: vid("video-6.mp4") },
-  { id: 33, type: "video", src: vid("video-7.mp4") },
-  { id: 34, type: "video", src: vid("video-8.mp4") },
-  { id: 35, type: "video", src: vid("video-9.mp4") },
-  { id: 36, type: "video", src: vid("video-10.mp4") },
+  { id: 27, type: "video", src: vid("video-1.mp4"), poster: vposter("video-1.jpg") },
+  { id: 28, type: "video", src: vid("video-2.mp4"), poster: vposter("video-2.jpg") },
+  { id: 29, type: "video", src: vid("video-3.mp4"), poster: vposter("video-3.jpg") },
+  { id: 30, type: "video", src: vid("video-4.mp4"), poster: vposter("video-4.jpg") },
+  { id: 31, type: "video", src: vid("video-5.mp4"), poster: vposter("video-5.jpg") },
+  { id: 32, type: "video", src: vid("video-6.mp4"), poster: vposter("video-6.jpg") },
+  { id: 33, type: "video", src: vid("video-7.mp4"), poster: vposter("video-7.jpg") },
+  { id: 34, type: "video", src: vid("video-8.mp4"), poster: vposter("video-8.jpg") },
+  { id: 35, type: "video", src: vid("video-9.mp4"), poster: vposter("video-9.jpg") },
+  { id: 36, type: "video", src: vid("video-10.mp4"), poster: vposter("video-10.jpg") },
 ]
 
 // ----------------------------------------------------------------------------
