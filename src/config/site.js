@@ -76,7 +76,7 @@ export const profile = {
     { label: "Görev Yeri", value: 1 },
   ],
   // Navbar başlığı
-  brand: { initial: "C", subtitle: "Anı & Hizmet" },
+  brand: { initial: "Ş", subtitle: "Anı & Hizmet" },
 }
 
 // ----------------------------------------------------------------------------
