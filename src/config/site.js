@@ -135,7 +135,7 @@ export const career = [
     rank: "TERSANE",
     title: "AKSAZ TERSANESİNDE İLK GÜN",
     description: "1 Kasım 2022'de Aksaz Tersanesi Komutanlığı'na atandı.",
-    image: images.foto3,
+    image: images.foto20,
   },
   {
     year: "1989 - 2026",
