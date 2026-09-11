@@ -128,7 +128,7 @@ export const career = [
     rank: "DENİZ LİSESİ",
     title: "DENİZ LİSESİNDE İLK GÜN",
     description: "30 Ağustos 1989 yılında Deniz Lisesi'nden başarıyla mezun oldu.",
-    image: images.foto2,
+    image: images.foto4,
   },
   {
     year: "2022",
@@ -142,7 +142,7 @@ export const career = [
     rank: "EMEKLİLİK",
     title: "AYRILIK VAKTİ GELDİ",
     description: "37 yıllık hizmet süresinin ardından emekliye ayrıldı.",
-    image: images.foto4,
+    image: images.foto2,
   },
   
 ]
