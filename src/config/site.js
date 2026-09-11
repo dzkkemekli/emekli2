@@ -291,7 +291,8 @@ export const contributors = [
   { id: 28, name: "VOLKAN ÇELİK" },
   { id: 29, name: "OKTAY OKUMUŞ" },
   { id: 30, name: "ÖNDER YÜCEL" },
-  { id: 31, name: "YUNUS EMRE SEPETCİ" },
+  { id: 31, name: "ALİ ÖZÜNLÜ" },
+  { id: 32, name: "YUNUS EMRE SEPETCİ" },
 ]
 
 // ----------------------------------------------------------------------------
