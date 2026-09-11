@@ -283,7 +283,7 @@ export const contributors = [
   { id: 20, name: "HAKAN KOTEL" },
   { id: 21, name: "MURAT GÜLERYÜZ" },
   { id: 22, name: "ALPEREN KARAOĞLU" },
-  { id: 23, name: "MUSTAFA GÖKMEN ÖZER" },
+  { id: 23, name: "Havuz 13 K'lığı" },
   { id: 24, name: "ERBİL ULUTAŞ" },
   { id: 25, name: "ALİ AYKANAT" },
   { id: 26, name: "GÖKHAN GÜNEŞ" },
