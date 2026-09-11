@@ -197,8 +197,8 @@ export const postings = [
 // ----------------------------------------------------------------------------
 export const featuredVideo = {
   provider: "local", // "local" → kendi videosu (src+poster) | "youtube" → embed (id)
-  src: vid("video-5.mp4"),
-  poster: vposter("video-5.jpg"),
+  src: vid("video-14.mp4"),
+  poster: vposter("video-14.jpg"),
   title: "Hizmet Yıllarından Kesitler",
   description:
     "Askeri kariyer boyunca biriktirilen anılardan bir video seçki. Dokunun ve izleyin.",
