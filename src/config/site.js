@@ -59,18 +59,18 @@ const images = {
 //  KİŞİSEL BİLGİLER  (Hero + Özgeçmiş)
 // ----------------------------------------------------------------------------
 export const profile = {
-  name: "Cemalettin ÇİFTÇİ",
-  rank: "TUĞAMİRAL",
+  name: "Şehmuz YAKAR",
+  rank: "KIDEMLİ BAŞÇAVUŞ",
   tagline: "Bir ömür vatan uğruna, anılara yazılmış hizmet.",
   shortBio:
     "Yıllar boyunca çeşitli birliklerde görev yapmış, görevini şerefle ifa etmiş bir askerin anıları, hizmet yerleri ve takdir edilen değerleri bir araya getiren saygı anıtı.",
   portrait: images.portrait,
   // Emeklilik tarihi (YYYY-AA-GG) — sayaç bu tarihten itibaren sayar
-  retirementDate: "2026-08-17",
+  retirementDate: "2026-09-01",
   // Hizmet özeti — Hero'daki sayaç istatistikleri
   stats: [
-    { label: "Hizmet Yılı", value: 35 },
-    { label: "Görev Yeri", value: 8 },
+    { label: "Hizmet Yılı", value: 37 },
+    { label: "Görev Yeri", value: 1 },
   ],
   // Navbar başlığı
   brand: { initial: "C", subtitle: "Anı & Hizmet" },
@@ -93,34 +93,20 @@ export const navLinks = [
 // ----------------------------------------------------------------------------
 export const rankInsigniaMap = {
   "BAŞLANGIÇ": { chevrons: 1, arc: false, stars: 0 },
-  "DENİZ LİSESİ": { chevrons: 2, arc: false, stars: 0 },
-  "DENİZ HARP OKULU": { chevrons: 3, arc: false, stars: 0 },
-  "ENVANTER KONTROL MERKEZİ KOMUTANLIĞI": { chevrons: 3, arc: true, stars: 0 },
-  "DENİZ İKMAL MERKEZİ KOMUTANLIĞI": { chevrons: 3, arc: true, stars: 0 },
-  "ABD NAVAL POSTGRADUATE SCHOOL": { chevrons: 3, arc: true, stars: 0 },
-  "ENVANTER KONTROL MERKEZİ (YAZILIM & SİSTEM)": { chevrons: 3, arc: true, stars: 0 },
-  "DONANMA KOMUTANLIĞI BİL. SİS. GÜV. KISIM AMİRLİĞİ": { chevrons: 3, arc: true, stars: 0 },
-  "DENİZ KUVVETLERİ MEBS BAŞKANLIĞI": { chevrons: 3, arc: true, stars: 0 },
-  "TUĞAMİRALLİĞE TERFİ VE MEBS BAŞKANLIĞI": { chevrons: 3, arc: true, stars: 1 },
-  "AKSAZ TERSANESİ KOMUTANLIĞI": { chevrons: 3, arc: true, stars: 1 },
-  "EMEKLİLİK": { chevrons: 3, arc: true, stars: 1, retired: true }
+  "DENİZ KUVVETLERİNDE İLK GÜN": { chevrons: 2, arc: false, stars: 0 },
+  "TERSANEDE GÖREVE BAŞLADI": { chevrons: 3, arc: false, stars: 0 },
+  "EMEKLİLİK VAKTİ GELDİ": { chevrons: 3, arc: true, stars: 0 },
+
   
 }
 
 export const rankOrder = [
 
   "BAŞLANGIÇ",
-  "DENİZ LİSESİ",
-  "DENİZ HARP OKULU",
-  "ENVANTER KONTROL MERKEZİ KOMUTANLIĞI",
-  "DENİZ İKMAL MERKEZİ KOMUTANLIĞI",
-  "ABD NAVAL POSTGRADUATE SCHOOL",
-  "ENVANTER KONTROL MERKEZİ (YAZILIM & SİSTEM)",
-  "DONANMA KOMUTANLIĞI BİL. SİS. GÜV. KISIM AMİRLİĞİ",
-  "DENİZ KUVVETLERİ MEBS BAŞKANLIĞI",
-  "TUĞAMİRALLİĞE TERFİ VE MEBS BAŞKANLIĞI",
-  "AKSAZ TERSANESİ KOMUTANLIĞI",
-  "EMEKLİLİK",
+  "DENİZ KUVVETLERİNDE İLK GÜN",
+  "TERSANEDE GÖREVE BAŞLADI",
+  "EMEKLİLİK VAKTİ GELDİ",
+
   
 ]
 
@@ -131,68 +117,34 @@ export const rankOrder = [
 // ----------------------------------------------------------------------------
 export const career = [
  {
-    year: "1973",
+    year: "1967",
     rank: "BAŞLANGIÇ",
     title: "HAYAT YOLCULUĞUNA BAŞLANGIÇ",
-    description: "1973 yılında Eskişehir'de dünyaya gözlerini açtı.",
+    description: "28 Nisan 1967 yılında Adana'da dünyaya gözlerini açtı.",
     image: images.foto1,
   },
   {
-    year: "1991",
+    year: "1989",
     rank: "DENİZ LİSESİ",
-    title: "DENİZ LİSESİ MEZUNİYETİ",
-    description: "1991 yılında Deniz Lisesi'nden başarıyla mezun oldu.",
+    title: "DENİZ LİSESİNDE İLK GÜN",
+    description: "30 Ağustos 1989 yılında Deniz Lisesi'nden başarıyla mezun oldu.",
     image: images.foto2,
   },
   {
-    year: "1995",
-    rank: "DENİZ HARP OKULU",
-    title: "DENİZ HARP OKULU VE SUBAYLIĞA ADIM",
-    description: "1995 yılında Deniz Harp Okulu'ndan mezun olarak Türk Deniz Kuvvetleri bünyesine katıldı.",
+    year: "2022",
+    rank: "TERSANE",
+    title: "AKSAZ TERSANESİNDE İLK GÜN",
+    description: "1 Kasım 2022'de Aksaz Tersanesi Komutanlığı'na atandı.",
     image: images.foto3,
   },
   {
-    year: "1995 - 1999",
-    rank: "ENVANTER KONTROL MERKEZ KOMUTANLIĞI",
-    title: "KATALOGLAMA VE KODLAMA SUBAYLIĞI",
-    description: "Envanter Kontrol Merkezi Komutanlığı bünyesinde Kataloglama ve Kodlama Subaylığı görevini icra etti.",
+    year: "1989 - 2026",
+    rank: "EMEKLİLİK",
+    title: "AYRILIK VAKTİ GELDİ",
+    description: "37 yıllık hizmet süresinin ardından emekliye ayrıldı.",
     image: images.foto4,
   },
-  {
-    year: "1995 - 1999",
-    rank: "DENİZ İKMAL MERKEZ KOMUTANLIĞI",
-    title: "STOK KONTROL SUBAYLIĞI",
-    description: "Deniz İkmal Merkezi Komutanlığında Stok Kontrol Subaylığı görevini üstlendi.",
-    image: images.foto5,
-  },
-  {
-    year: "1999 - 2001",
-    rank: "LİSANS ÜSTÜ DÖNEM SONRASI",
-    title: "ABD NAVAL POSTGRADUATE SCHOOL YÜKSEK LİSANS",
-    description: "Amerika Birleşik Devletleri'nde Naval Postgraduate School'da yüksek lisans eğitimini başarıyla tamamladı.",
-    image: images.foto6,
-  },
-  {
-    year: "2023",
-    rank: "TERFİ",
-    title: "TUĞAMİRALLİĞE TERFİ VE MEBS BAŞKANLIĞI",
-    description: "Yüksek Askeri Şura kararıyla Tuğamiralliğe terfi ederek Deniz Kuvvetleri Komutanlığı MEBS Başkanı olarak atandı.",
-    image: images.foto7,
-  },
-  {
-    year: "2025",
-    rank: "AKSAZ TERSANESİ KOMUTANLIĞI",
-    title: "AKSAZ TERSANESİ KOMUTANI",
-    description: "Cumhurbaşkanlığı kararnamesi ile Aksaz Tersanesi Komutanlığı görevine atandı.",
-    image: images.foto8,
-  },
-  {
-    year: "2026",
-    rank: "EMEKLİLİK",
-    title: "MÜMTAZ HİZMETLERLE EMEKLİLİK",
-    description: "Türk Deniz Kuvvetleri'ne ve vatanına adadığı onlarca yıllık gurur dolu hizmetin ardından emekliye ayrıldı.",
-    image: images.foto9,
-  },
+  
 ]
 
 // ----------------------------------------------------------------------------
@@ -202,101 +154,32 @@ export const career = [
 // ----------------------------------------------------------------------------
 export const postings = [
   {
-    id: "eskisehir",
-    location: "Eskişehir",
-    period: "1973",
+    id: "adana",
+    location: "Adana",
+    period: "1967",
     unit: "Doğum / Çocukluk",
-    description: "1973 yılında Eskişehir'de dünyaya gözlerini açtı.",
-    coords: [39.7767, 30.5206],
+    description: "28 Nisan 1967 tarihinde Adana'da dünyaya gözlerini açtı.",
+    coords: [37.0000, 35.3213],
     image: images.foto1,
     gallery: [images.foto1],
   },
   {
-    id: "deniz-lisesi",
-    location: "Heybeliada / İstanbul",
-    period: "1991",
-    unit: "Deniz Lisesi Komutanlığı",
-    description: "1991 yılında Deniz Lisesi'nden başarıyla mezun oldu.",
-    coords: [40.8767, 29.0911],
+    id: "goreve-baslama",
+    location: "Göreve Başlangıç",
+    period: "1989",
+    unit: "İlk Görev",
+    description: "30 Ağustos 1989 tarihinde meslek hayatına resmen ilk adımını attı.",
+    coords: [39.9334, 32.8597], // Genel koordinat (örn. Ankara)
     image: images.foto2,
     gallery: [images.foto2],
   },
-  {
-    id: "deniz-harp-okulu",
-    location: "Tuzla / İstanbul",
-    period: "1995",
-    unit: "Deniz Harp Okulu Komutanlığı",
-    description: "1995 yılında Deniz Harp Okulu'ndan mezun olarak Türk Deniz Kuvvetleri bünyesine katıldı.",
-    coords: [40.8160, 29.2650],
-    image: images.foto3,
-    gallery: [images.foto3],
-  },
-  {
-    id: "envanter-ikmal-golcuk",
-    location: "Gölcük / Kocaeli",
-    period: "1995 — 1999",
-    unit: "Envanter Kontrol & Deniz İkmal Merkezi Komutanlığı",
-    description: "Kataloglama, Kodlama Subaylığı ve Stok Kontrol Subaylığı görevlerini icra etti.",
-    coords: [40.7180, 29.8330],
-    image: images.foto4,
-    gallery: [images.foto4, images.foto5],
-  },
-  {
-    id: "naval-postgraduate-school",
-    location: "Monterey / ABD",
-    period: "1999 — 2001",
-    unit: "Naval Postgraduate School",
-    description: "Amerika Birleşik Devletleri'nde yüksek lisans eğitimini başarıyla tamamladı.",
-    coords: [36.5985, -121.8744],
-    image: images.foto6,
-    gallery: [images.foto6],
-  },
-  {
-    id: "envanter-yazilim-golcuk",
-    location: "Gölcük / Kocaeli",
-    period: "2001 — 2011",
-    unit: "Envanter Kontrol Merkezi Komutanlığı",
-    description: "Yazılım Proje Mühendisliği, Kısım Amirliği ve Şube Müdürlüğü görevlerini yürüttü.",
-    coords: [40.7180, 29.8330],
-    image: images.foto7,
-    gallery: [images.foto7],
-  },
-  {
-    id: "donanma-komutanligi",
-    location: "Gölcük / Kocaeli",
-    period: "2011 — 2016",
-    unit: "Donanma Komutanlığı Bilgi Sistemleri Güvenlik Kısım Amirliği",
-    description: "Bilgi Sistemleri Güvenlik Kısım Amirliğinin ilk amiri olarak görev yaptı.",
-    coords: [40.7170, 29.8270],
-    image: images.foto8,
-    gallery: [images.foto8],
-  },
-  {
-    id: "dzkk-mebs-ankara",
-    location: "Çankaya / Ankara",
-    period: "2016 — 2023",
-    unit: "Deniz Kuvvetleri Komutanlığı MEBS / Bilgi Sistemleri Daire Başkanlığı",
-    description: "Sistem Analiz, Hizmet Destek Şube Müdürlüğü ve Bilgi Sistemleri Daire Başkanlığı görevlerinde bulundu.",
-    coords: [39.9142, 32.8517],
-    image: images.foto9,
-    gallery: [images.foto9],
-  },
-  {
-    id: "mebs-baskanligi-tugamiral",
-    location: "Çankaya / Ankara",
-    period: "2023 — 2025",
-    unit: "Deniz Kuvvetleri Komutanlığı MEBS Başkanlığı",
-    description: "30 Ağustos 2023'te Tuğamiralliğe terfi ederek Cumhurbaşkanlığı kararnamesiyle MEBS Başkanı oldu.",
-    coords: [39.9142, 32.8517],
-    image: images.foto10,
-    gallery: [images.foto10],
-  },
+  
   {
     id: "aksaz-tersanesi",
     location: "Marmaris / Muğla",
-    period: "2025 — 2026",
+    period: "2022 — 2026",
     unit: "Aksaz Tersanesi Komutanlığı",
-    description: "Cumhurbaşkanlığı kararnamesi ile Aksaz Tersanesi Komutanı olarak görev yaptı.",
+    description: "Aksaz Tersanesi Komutanlığına Atandı.",
     coords: [36.8410, 28.3960],
     image: images.foto11,
     gallery: [images.foto11, images.foto12],
