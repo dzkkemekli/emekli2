@@ -145,7 +145,7 @@ export const career = [
     rank: "EMEKLİLİK",
     title: "AYRILIK VAKTİ GELDİ",
     description: "37 yıllık hizmet süresinin ardından emekliye ayrıldı.",
-    image: images.foto2,
+    image: images.foto26,
   },
   
 ]
