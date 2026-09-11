@@ -196,12 +196,13 @@ export const postings = [
 //  thumbnail: kapak karesi (boş bıkılırsa YouTube'tan otomatik alınır)
 // ----------------------------------------------------------------------------
 export const featuredVideo = {
-  provider: "youtube",
-  id: "OUM1GL8iboM",
+  provider: "local", // "local" → kendi videosu (src+poster) | "youtube" → embed (id)
+  src: vid("video-5.mp4"),
+  poster: vposter("video-5.jpg"),
   title: "Hizmet Yıllarından Kesitler",
   description:
     "Askeri kariyer boyunca biriktirilen anılardan bir video seçki. Dokunun ve izleyin.",
-  thumbnail: null, // ör: "/images/video-kapak.jpg" — boşsa YouTube kapağı kullanılır
+  thumbnail: null, // boşsa poster (local) veya YouTube kapağı kullanılır
 }
 
 // ----------------------------------------------------------------------------

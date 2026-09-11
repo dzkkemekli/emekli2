@@ -11,6 +11,9 @@ function getThumbnail(video) {
   if (video.provider === "youtube") {
     return `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`
   }
+  if (video.provider === "local") {
+    return video.poster ?? null
+  }
   return null
 }
 
@@ -38,6 +41,7 @@ export default function VideoSection() {
     featuredVideo.provider === "youtube"
       ? `https://www.youtube.com/embed/${featuredVideo.id}?autoplay=1&rel=0`
       : null
+  const isLocal = featuredVideo.provider === "local" && featuredVideo.src
 
   return (
     <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-20">
@@ -121,6 +125,47 @@ export default function VideoSection() {
                 className="size-full"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Yerel video oynatıcı (modal) */}
+      <AnimatePresence>
+        {open && isLocal && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4 backdrop-blur-sm"
+            onClick={close}
+            role="dialog"
+            aria-modal="true"
+          >
+            <button
+              type="button"
+              onClick={close}
+              aria-label="Kapat"
+              className="absolute right-4 top-4 flex size-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 cursor-pointer"
+            >
+              <X className="size-5" />
+            </button>
+            <motion.div
+              initial={{ scale: 0.95 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.95 }}
+              transition={{ duration: 0.25 }}
+              className="aspect-video w-full max-w-4xl overflow-hidden rounded-lg shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <video
+                src={featuredVideo.src}
+                poster={featuredVideo.poster}
+                controls
+                autoPlay
+                className="size-full bg-black"
               />
             </motion.div>
           </motion.div>
