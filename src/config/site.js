@@ -255,6 +255,7 @@ export const gallery = [
   { id: 37, type: "video", src: vid("video-11.mp4"), poster: vposter("video-11.jpg") },
   { id: 38, type: "video", src: vid("video-12.mp4"), poster: vposter("video-12.jpg") },
   { id: 39, type: "video", src: vid("video-13.mp4"), poster: vposter("video-13.jpg") },
+  { id: 40, type: "video", src: vid("video-14.mp4"), poster: vposter("video-14.jpg") },
 ]
 
 // ----------------------------------------------------------------------------
