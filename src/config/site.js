@@ -243,7 +243,8 @@ export const gallery = [
   { id: 28, type: "photo", src: images.foto28 },
 
   // — Anı videoları —
-  { id: 27, type: "video", src: vid("video-1.mp4"), poster: vposter("video-1.jpg") },
+  { id: 27, type: "video", src: vid("video-14.mp4"), poster: vposter("video-14.jpg") },
+  { id: 41, type: "video", src: vid("video-1.mp4"), poster: vposter("video-1.jpg") },
   { id: 28, type: "video", src: vid("video-2.mp4"), poster: vposter("video-2.jpg") },
   { id: 29, type: "video", src: vid("video-3.mp4"), poster: vposter("video-3.jpg") },
   { id: 30, type: "video", src: vid("video-4.mp4"), poster: vposter("video-4.jpg") },
@@ -255,7 +256,6 @@ export const gallery = [
   { id: 37, type: "video", src: vid("video-11.mp4"), poster: vposter("video-11.jpg") },
   { id: 38, type: "video", src: vid("video-12.mp4"), poster: vposter("video-12.jpg") },
   { id: 39, type: "video", src: vid("video-13.mp4"), poster: vposter("video-13.jpg") },
-  { id: 40, type: "video", src: vid("video-14.mp4"), poster: vposter("video-14.jpg") },
 ]
 
 // ----------------------------------------------------------------------------
