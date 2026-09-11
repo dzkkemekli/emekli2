@@ -50,6 +50,9 @@ const images = {
   foto23: img("foto-23.jpeg"),
   foto24: img("foto-24.jpeg"),
   foto25: img("foto-25.jpeg"),
+  foto26: img("foto-26.jpeg"),
+  foto27: img("foto-27.jpeg"),
+  foto28: img("foto-28.jpeg"),
 
   // — Yeni görselleri buraya ekleyin —
   // ornekFoto: img("ornek.jpg"),
@@ -234,6 +237,9 @@ export const gallery = [
   { id: 23, type: "photo", src: images.foto23 },
   { id: 24, type: "photo", src: images.foto24 },
   { id: 25, type: "photo", src: images.foto25 },
+  { id: 26, type: "photo", src: images.foto26 },
+  { id: 27, type: "photo", src: images.foto27 },
+  { id: 28, type: "photo", src: images.foto28 },
 
   // — Anı videoları —
   { id: 27, type: "video", src: vid("video-1.mp4"), poster: vposter("video-1.jpg") },
@@ -245,6 +251,9 @@ export const gallery = [
   { id: 34, type: "video", src: vid("video-8.mp4"), poster: vposter("video-8.jpg") },
   { id: 35, type: "video", src: vid("video-9.mp4"), poster: vposter("video-9.jpg") },
   { id: 36, type: "video", src: vid("video-10.mp4"), poster: vposter("video-10.jpg") },
+  { id: 37, type: "video", src: vid("video-11.mp4"), poster: vposter("video-11.jpg") },
+  { id: 38, type: "video", src: vid("video-12.mp4"), poster: vposter("video-12.jpg") },
+  { id: 39, type: "video", src: vid("video-13.mp4"), poster: vposter("video-13.jpg") },
 ]
 
 // ----------------------------------------------------------------------------
