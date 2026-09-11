@@ -1,9 +1,51 @@
+import { useState, useCallback } from "react"
 import { motion } from "motion/react"
 
 import { career } from "@/config/site"
 import RankInsignia from "@/components/RankInsignia"
+import Lightbox from "@/components/Lightbox"
 
 export default function Timeline() {
+  // Zaman çizelgesi fotoğrafları — lightbox'ta gezinilebilir liste
+  const timelineMedia = career
+    .filter((entry) => entry.image)
+    .map((entry) => ({
+      id: entry.year,
+      type: "photo",
+      src: entry.image,
+      caption: entry.title,
+    }))
+
+  const [open, setOpen] = useState(false)
+  const [index, setIndex] = useState(0)
+  const [direction, setDirection] = useState(0)
+
+  const openAt = useCallback((i) => {
+    setDirection(0)
+    setIndex(i)
+    setOpen(true)
+  }, [])
+
+  const go = useCallback((next) => {
+    setIndex((cur) => {
+      const total = timelineMedia.length
+      if (total === 0) return cur
+      const n = (next + total) % total
+      setDirection(n > cur ? 1 : -1)
+      return n
+    })
+  }, [timelineMedia.length])
+
+  const next = useCallback(() => go(index + 1), [go, index])
+  const prev = useCallback(() => go(index - 1), [go, index])
+  const jump = useCallback(
+    (i) => {
+      setDirection(i > index ? 1 : -1)
+      setIndex(i)
+    },
+    [index]
+  )
+
   return (
     <div className="relative">
       {/* Ortadaki dikey çizgi — masaüstü */}
@@ -20,6 +62,7 @@ export default function Timeline() {
       <ol className="space-y-8 md:space-y-0">
         {career.map((entry, i) => {
           const isLeft = i % 2 === 0
+          const mediaIndex = timelineMedia.findIndex((m) => m.id === entry.year)
           return (
             <motion.li
               key={entry.year}
@@ -75,13 +118,19 @@ export default function Timeline() {
                   </p>
 
                   {entry.image && (
-                    <div className="mt-4 overflow-hidden rounded-md border border-border">
+                    <button
+                      type="button"
+                      onClick={() => mediaIndex >= 0 && openAt(mediaIndex)}
+                      aria-label={`${entry.title} fotoğrafını büyüt`}
+                      className="group relative mt-4 block w-full cursor-zoom-in overflow-hidden rounded-md border border-border"
+                    >
                       <img
                         src={entry.image}
                         alt={entry.title}
-                        className="aspect-video w-full object-cover"
+                        loading="lazy"
+                        className="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
-                    </div>
+                    </button>
                   )}
                 </div>
               </div>
@@ -89,6 +138,17 @@ export default function Timeline() {
           )
         })}
       </ol>
+
+      <Lightbox
+        open={open}
+        index={index}
+        direction={direction}
+        items={timelineMedia}
+        onClose={() => setOpen(false)}
+        onPrev={prev}
+        onNext={next}
+        onJump={jump}
+      />
     </div>
   )
 }
